@@ -1,5 +1,7 @@
 # Human-activity-and-energy-emission-calculation
 
+
+## Pre trained model - [yolov and blip processor](https://github.com/harish-AK/Human-activity-and-energy-emission-calculation/blob/main/HUman_detection_and_activity_recognition.ipynb)
 Here's a detailed summary of the project:
 
 ## Project Overview
@@ -51,4 +53,55 @@ Deep Learning: The Blip model is a deep learning model that uses a transformer a
                                       |  Data Storage      |
                                       |  (Frame, Person ID,  |
                                       |   Action)          |
+                                      +---------------+
+
+
+## Custom dataset - [conv lstm](https://github.com/harish-AK/Human-activity-and-energy-emission-calculation/blob/main/HAR_model_ConvLstm_model.ipynb)
+I developed a deep learning model using TensorFlow and Keras to classify videos into 7 classes. The model is a Convolutional LSTM (ConvLSTM) network, which is a type of recurrent neural network (RNN) that combines convolutional neural networks (CNNs) with LSTM layers to process sequential data with spatial hierarchies, such as videos.
+
+## Techniques Used:
+
+Video Frame Extraction: You've written a function frames_extraction to extract frames from video files using OpenCV.
+Data Preprocessing: You've resized the frames to a fixed height and width, normalized the pixel values to be between 0 and 1, and stored the preprocessed frames in a list.
+Dataset Creation: You've created a custom dataset by iterating through a directory containing video files organized by class, extracting frames from each video, and storing the frames, labels, and video file paths in separate lists.
+ConvLSTM Model Architecture: You've designed a ConvLSTM model with multiple layers, including ConvLSTM2D, MaxPooling3D, TimeDistributed, and Dense layers. The model takes a sequence of frames as input and outputs a class label.
+Model Compilation: You've compiled the model with a suitable optimizer and loss function.
+## Workflow Diagram:
+                                      +---------------+
+                                      |  Video Files  |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Frame Extraction  |
+                                      |  (OpenCV)          |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Data Preprocessing  |
+                                      |  (Resize, Normalize)  |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Dataset Creation    |
+                                      |  (Custom Dataset)     |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  ConvLSTM Model      |
+                                      |  (TensorFlow, Keras)  |
+                                      +---------------+
+                                             |
+                                             |
+                                             v
+                                      +---------------+
+                                      |  Model Compilation   |
+                                      |  (Optimizer, Loss)    |
                                       +---------------+

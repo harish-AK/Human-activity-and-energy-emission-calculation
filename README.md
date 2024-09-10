@@ -56,6 +56,8 @@ Deep Learning: The Blip model is a deep learning model that uses a transformer a
                                       +---------------+
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Custom dataset - [conv lstm](https://github.com/harish-AK/Human-activity-and-energy-emission-calculation/blob/main/HAR_model_ConvLstm_model.ipynb)
 I developed a deep learning model using TensorFlow and Keras to classify videos into 7 classes. The model is a Convolutional LSTM (ConvLSTM) network, which is a type of recurrent neural network (RNN) that combines convolutional neural networks (CNNs) with LSTM layers to process sequential data with spatial hierarchies, such as videos.
 
